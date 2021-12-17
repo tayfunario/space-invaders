@@ -152,7 +152,7 @@ function mermiKontrol() {
                 meteorlar.splice(meteorlar.indexOf(met), 1)
                 met.html.remove()
                 mermi.html.style.display = 'none'
-                mermiler.shift()
+                mermiler.splice(mermiler.indexOf(mermi), 1)
             }
         }
     }
