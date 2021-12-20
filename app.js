@@ -158,6 +158,18 @@ function mermiKontrol() {
     }
 }
 
+function oyunBitti() {
+    if (meteorlar.length == 0) {
+        clearInterval(anaInterval)
+        clearInterval(arkaplanInterval)
+        clearInterval(engelInterval)
+        alert('oyunu kazandınız!')
+        setTimeout(() => {
+            location.reload()
+        }, 1);
+    }
+}
+
 // fonksiyonları çağır
 meteorlariYukle()
 
@@ -184,6 +196,7 @@ anaInterval = setInterval(function() {
     }
 
     mermiKontrol()
+    oyunBitti()
 }, 20)
 
 arkaplanInterval = setInterval(function() {
